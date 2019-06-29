@@ -1,0 +1,17 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "@id": "http://www.jane.doe.example.com/#me",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Example Town",
+    "postalCode": "1234 YZ",
+    "streetAddress": "Default Street 42"
+  },
+  "email": "mailto:jane.doe@example.com",
+  "image": "profile_image.png",
+  "jobTitle": "Street Artist",
+  "name": "Jane Doe",
+  "telephone": "01-12345678",
+  "url": "http://www.jane.doe.example.com"
+}

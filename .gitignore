@@ -1,0 +1,11 @@
+# Ignore downloaded external libraries
+/node_modules/
+
+# Ignore build versions of the server- and client code
+/server/
+/public/
+
+# -- Build tools --
+
+# Yarn
+yarn-error.log

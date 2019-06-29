@@ -1,0 +1,37 @@
+{
+  "name": "lynx",
+  "version": "0.1.0",
+  "description": "An experimental personal (FOSS) project for the semantic web.",
+  "main": "./bin/www",
+  "author": "Hans-Christiaan Braun",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node ./server/server.js",
+    "build": "yarn build:server && yarn build:client",
+    "build:server": "webpack --config webpack.server.js",
+    "build:client": "webpack --config webpack.client.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "esm": "^3.2.25",
+    "express": "~4.16.1",
+    "express-handlebars": "^3.1.0",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mustache": "^3.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.6",
+    "webpack-cli": "^3.3.4",
+    "webpack-merge": "^4.2.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
