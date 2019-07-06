@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Person from './Person';
+import App from './App';
 
 /*
  * Retrieve the data from the head when the page has been loaded.
@@ -13,9 +13,9 @@ window.addEventListener( 'load', event => {
   const data = JSON.parse( dataElement.innerText );
 
   // Inject the data into the page.
-  const person = <Person {...data} />
+  const app = <App {...data} />
   
   // Bring some life into the page using React.
-  ReactDOM.hydrate(person, document.getElementById('app'));
+  ReactDOM.hydrate(app, document.getElementById('app'));
 } );
 
