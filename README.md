@@ -19,9 +19,10 @@ The main advantages of this approach are these:
  2. Linked data acts as the single source of truth. No need to derive it from another source like other data formats, or worse: from the raw HTML itself.
  3. On the client you get a full-fledged React application, with all the advantages of client-side rendering.
 
+## Changelog
+ - ✅ Added Redux to the stack.
+ 
 ## Plans for the future
- - Add Redux to the stack.
-    - With Redux we can make a single linked data graph the core of the client-side application.
  - Devise a way to abstract away from RDFa-tags. There is still a lot of boilerplate involved to add them to the HTML. E.g.:
     ```html
     <h1 property="name">{props.name}</h1> 
