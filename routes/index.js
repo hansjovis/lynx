@@ -5,7 +5,7 @@ import { renderToString } from 'react-dom/server';
 /*
  * Components
  */
-import App from '../client_src/javascripts/App';
+import App from '../client_src/javascripts/components/App';
 
 /*
  * (Mock) data
