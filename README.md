@@ -20,7 +20,7 @@ The main advantages of this approach are these:
  3. On the client you get a full-fledged React application, with all the advantages of client-side rendering.
 
 ## Plans for the future
- - Add Redux to the stack.
+ - Add Redux to the stack (see [issue #1](https://github.com/hansjovis/lynx/issues/1)).
     - With Redux we can make a single linked data graph the core of the client-side application.
  - Devise a way to abstract away from RDFa-tags. There is still a lot of boilerplate involved to add them to the HTML. E.g.:
     ```html
