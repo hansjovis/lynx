@@ -20,6 +20,7 @@ The main advantages of this approach are these:
  3. On the client you get a full-fledged React application, with all the advantages of client-side rendering.
 
 ## Changelog
+### 2019-07-06
  - ✅ Added Redux to the stack.
  
 ## Plans for the future
