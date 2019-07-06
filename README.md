@@ -10,8 +10,6 @@ The rendered component is then sent to the client as an HTML-page. The linked da
 
 On the client, the component is brought to life by retrieving the data from the `head` and injecting it into the React component.
 
-The HTML is also annotated with RDFa-tags, so web crawlers can extract the linked data from the HTML as well.
-
 ----
 
 The main advantages of this approach are these:
