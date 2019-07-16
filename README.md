@@ -21,7 +21,7 @@ The main advantages of this approach are these:
  2. Linked data acts as the single source of truth. No need to derive it from another source like other data formats, or worse: from the raw HTML itself.
  3. On the client you get a full-fledged React application, with all the advantages of client-side rendering.
 
-## Development
+## Building and Development
 
 ### Building source files
  - `yarn build` builds the source files (alias for `yarn build:server && yarn build:client`).
@@ -36,7 +36,5 @@ The main advantages of this approach are these:
  - ✅ Added Redux to the stack.
  
 ## Plans for the future
- - Devise a way to abstract away from RDFa-tags. There is still a lot of boilerplate involved to add them to the HTML. E.g.:
-    ```html
-    <h1 property="name">{props.name}</h1> 
-    ```
+ - Add a login capability to start working on the admin side.
+
