@@ -8,13 +8,11 @@ This is a personal project I have started to explore how semantic web technologi
 ## Current status
 It is still in its very early experimental phases.
 
-Currently, it consists of a single React component that is rendered on the server, based on data stored as [JSON-LD](https://w3c.github.io/json-ld-syntax/) (a JSON-based format to serialize Linked Data).
+Currently, it consists of a React + Redux application that is rendered on the server, based on data stored as [JSON-LD](https://w3c.github.io/json-ld-syntax/) (a JSON-based format to serialize Linked Data).
 
-The rendered component is then sent to the client as an HTML-page. The linked data is included in the `head` of the page, inside of a script-tag. This is a wide-spread technique to make the data available to web crawlers.
+The rendered React tree is then sent to the client as an HTML-page. The linked data is included in the `head` of the page, inside of a script-tag. This is a wide-spread technique to make the data available to web crawlers.
 
-On the client, the component is brought to life by retrieving the data from the `head` and injecting it into the React component.
-
-The HTML is also annotated with RDFa-tags, so web crawlers can extract the linked data from the HTML as well.
+On the client, the React application is brought to life by retrieving the data from the `head` and injecting it into the Redux store.
 
 ----
 
