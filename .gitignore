@@ -5,6 +5,9 @@
 /server/
 /public/
 
+# Ignore configuration files (for e.g. database connection)
+/config/
+
 # -- Build tools --
 
 # Yarn
