@@ -19,7 +19,7 @@ import createReduxStore from './createReduxStore';
  */
 window.addEventListener( 'load', event => {
   // Retrieve the data from the script element in the head.
-  const dataElement = document.getElementById('data');
+  const dataElement = document.getElementById( 'data' );
   const data = JSON.parse( dataElement.innerText );
 
   const store = createReduxStore( data );
@@ -28,13 +28,13 @@ window.addEventListener( 'load', event => {
   const app = (
     <Provider store={ store }>
       <Router>
-        {renderRoutes(routes)}
+        {renderRoutes( routes )}
       </Router>
     </Provider>
   );
     
   
   // Bring some life into the page using React.
-  ReactDOM.hydrate(app, document.getElementById('app'));
+  ReactDOM.hydrate( app, document.getElementById( 'app' ) );
 } );
 

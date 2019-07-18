@@ -17,7 +17,7 @@ import routes from './routes';
 const router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get( '/', function( req, res, next ) {
   // Create the redux store, which houses the application state.
   const store = createReduxStore( data );
 
@@ -26,7 +26,7 @@ router.get('/', function(req, res, next) {
   // The application in JSX.
   const app = (
     <Router context={context} location={req.path} query={req.query}>
-      {renderRoutes(routes, { store } )}
+      {renderRoutes( routes, { store } )}
     </Router>
   );
   
@@ -37,7 +37,7 @@ router.get('/', function(req, res, next) {
   const dataString = JSON.stringify( data, null, 2 );
 
   // Render the HTML-page using the rendered application and the stringified linked data.
-  res.render('index', { content, data: dataString });
+  res.render( 'index', { content, data: dataString } );
 });
 
 export default router;
