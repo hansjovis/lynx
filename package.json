@@ -10,7 +10,8 @@
     "start": "node ./server/server.js",
     "build": "yarn build:server && yarn build:client",
     "build:server": "webpack --config webpack.server.js",
-    "build:client": "webpack --config webpack.client.js"
+    "build:client": "webpack --config webpack.client.js",
+    "lint": "eslint --ignore-path .gitignore ./"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

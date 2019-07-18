@@ -10,6 +10,6 @@ import rootReducer from './reducers/root';
  */
 const createReduxStore = function( intitialState ) {
   return createStore( rootReducer, intitialState );
-}
+};
 
 export default createReduxStore;

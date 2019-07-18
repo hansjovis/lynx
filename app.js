@@ -12,15 +12,15 @@ const app = express();
 /*
  * Setup middleware and configuration options.
  */
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static('public'));
+app.use( logger( 'dev' ) );
+app.use( express.json() );
+app.use( express.urlencoded( { extended: false } ) );
+app.use( cookieParser() );
+app.use( express.static( 'public' ) );
 
 /*
  * Setup route handling.
  */
-app.use('/', indexRouter);
+app.use( '/', indexRouter );
 
 export default app;

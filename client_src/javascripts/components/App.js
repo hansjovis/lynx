@@ -5,12 +5,12 @@ import Person from './Person';
 
 const mapStateToProps = function( state, ownProps ) {
   return state;
-}
+};
 
 const App = function( props ) {
   return <div>
     <Person { ...props }/>
-  </div>
-}
+  </div>;
+};
 
 export default connect( mapStateToProps )( App );
