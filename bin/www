@@ -7,6 +7,23 @@ import app    from '../app';
 import debug  from 'debug';
 import http   from 'http';
 import exphbs from 'express-handlebars';
+import mongoose from 'mongoose';
+
+/**
+ * Load configuration.
+ */
+import DB_CONFIG from '../config/database.json';
+
+/**
+ * Connect to database.
+ */
+mongoose.connect(DB_CONFIG.URL,  { useNewUrlParser: true }, (err) => {
+  if(err) {
+    console.error('Error connecting to the database:\n >', err.message);
+  } else {
+    console.log('Connected to database.');
+  }
+});
 
 /**
  * Get port from environment and store in Express.
