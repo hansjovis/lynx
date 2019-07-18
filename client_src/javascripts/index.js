@@ -1,9 +1,16 @@
 
+// React
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// Redux
 import { Provider } from 'react-redux';
-import App from './components/App';
+
+// React Router
+import { BrowserRouter as Router } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
+
+import routes from '../../routes/routes';
 
 import createReduxStore from './createReduxStore';
 
@@ -20,7 +27,9 @@ window.addEventListener( 'load', event => {
   // Inject the data into the page.
   const app = (
     <Provider store={ store }>
-      <App/>
+      <Router>
+        {renderRoutes(routes)}
+      </Router>
     </Provider>
   );
     
