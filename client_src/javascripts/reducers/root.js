@@ -6,7 +6,7 @@ const intitialState = {
 
 };
 
-const rootReducer = function( state = intitialState, action ) {
+const rootReducer = function( state = intitialState ) {
   return state;
 };
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import Person from './Person';
 
-const mapStateToProps = function( state, ownProps ) {
+const mapStateToProps = function( state ) {
   return state;
 };
 
