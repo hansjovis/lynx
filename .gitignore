@@ -6,7 +6,11 @@
 /public/
 
 # Ignore configuration files (for e.g. database connection)
-/config/
+#  - except for sample files
+#  - except for the readme
+/config/*
+!/config/readme.md
+!/config/*.example.json
 
 # -- Build tools --
 
