@@ -42,6 +42,11 @@ You should configure Lynx to use your MongoDB instance by adding the appropriate
  - `yarn lint` lints the source files using ESLint.
 
 ## Changelog
+### 2019-07-18
+ - ✅ Added React Router.
+ - ✅ Added ESLint + configuration.
+### 2019-07-16
+ - ✅ Added database connection (MongoDB).
 ### 2019-07-06
  - ✅ Added Redux to the stack.
  
