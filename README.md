@@ -23,6 +23,13 @@ The main advantages of this approach are these:
 
 ## Building and Development
 
+### First time setup
+#### Setting up the database
+The application uses [MongoDB](https://mongodb.com) as the database engine.
+You can [download the community edition here](https://www.mongodb.com/download-center/community).
+
+You should configure Lynx to use your MongoDB instance by adding the appropriate configuration ([see the `config` folder](https://github.com/hansjovis/lynx/tree/develop/config)).
+
 ### Building source files
  - `yarn build` builds the source files (alias for `yarn build:server && yarn build:client`).
  - `yarn build:server` builds the server files only.
