@@ -38,6 +38,9 @@ You should configure Lynx to use your MongoDB instance by adding the appropriate
 ### Running the application
  - `yarn start` runs the application.
 
+### Linting the source files
+ - `yarn lint` lints the source files using ESLint.
+
 ## Changelog
 ### 2019-07-06
  - ✅ Added Redux to the stack.
