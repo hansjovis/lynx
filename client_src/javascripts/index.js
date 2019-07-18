@@ -17,7 +17,7 @@ import createReduxStore from './createReduxStore';
 /*
  * Retrieve the data from the head when the page has been loaded.
  */
-window.addEventListener( 'load', event => {
+window.addEventListener( 'load', () => {
   // Retrieve the data from the script element in the head.
   const dataElement = document.getElementById( 'data' );
   const data = JSON.parse( dataElement.innerText );

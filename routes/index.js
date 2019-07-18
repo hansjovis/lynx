@@ -1,7 +1,6 @@
 import express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import Provider from 'react-redux';
 
 import { StaticRouter as Router } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
@@ -17,7 +16,7 @@ import routes from './routes';
 const router = express.Router();
 
 /* GET home page. */
-router.get( '/', function( req, res, next ) {
+router.get( '/', function( req, res ) {
   // Create the redux store, which houses the application state.
   const store = createReduxStore( data );
 
