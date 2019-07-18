@@ -19,7 +19,7 @@ import DB_CONFIG from '../config/database.json';
  */
 mongoose.connect(DB_CONFIG.URL,  { useNewUrlParser: true }, (err) => {
   if(err) {
-    console.error('Error connecting to the database:\n', err);
+    console.error('Error connecting to the database:\n >', err.message);
   } else {
     console.log('Connected to database.');
   }
