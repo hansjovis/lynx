@@ -37,6 +37,6 @@ router.get( '/', function( req, res ) {
 
   // Render the HTML-page using the rendered application and the stringified linked data.
   res.render( 'index', { content, data: dataString } );
-});
+} );
 
 export default router;
