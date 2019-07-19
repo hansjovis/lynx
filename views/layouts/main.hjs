@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Meta information -->
     <meta charset="utf-8">
     <title>{{title}}</title>
     <!-- Linked Data -->
     <script id="data" type="application/json+ld">{{{data}}}</script>
+    <!-- Scripts -->
+    {{#each scripts}}
+    <script src="{{this}}" type="application/javascript"></script>
+    {{/each}}
 </head>
 <body>
     <main id="app">{{{body}}}</main>
-    <script src="js/client-bundle.js" type="application/javascript"></script>
 </body>
 </html>
