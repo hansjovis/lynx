@@ -19,7 +19,7 @@ const router = express.Router();
 const scripts = [ "js/client-bundle.js" ];
 
 /* GET home page. */
-router.get( '/', function( req, res ) {
+router.get( '/*', function( req, res ) {
   // Create the redux store, which houses the application state.
   const store = createReduxStore( data );
 
