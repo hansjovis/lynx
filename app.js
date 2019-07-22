@@ -6,6 +6,7 @@ import logger       from 'morgan';
  * Import routers.
  */
 import indexRouter from './routes/index';
+import adminRouter from './routes/admin';
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use( express.static( 'public' ) );
 /*
  * Setup route handling.
  */
+app.use( '/admin', adminRouter );
 app.use( '/', indexRouter );
 
 export default app;
