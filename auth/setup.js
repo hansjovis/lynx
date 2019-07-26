@@ -19,7 +19,10 @@ passport.deserializeUser( ( id, next ) => {
       next( error, null );
     } else {
       let user = response;
-      // Delete the password from the response, since we do not want to send it to the client.
+      /*
+       * Delete the password from the response, 
+       * since we do not want to send it to the client.
+       */ 
       delete user.password;
       next( null, user );
     }
