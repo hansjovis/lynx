@@ -17,6 +17,8 @@ import adminRouter from './routes/admin';
 import loginRouter from './routes/login';
 import apiRouter   from './routes/api';
 
+import isLoggedIn from './auth/isLoggedIn';
+
 const app = express();
 
 /*
@@ -40,7 +42,7 @@ app.use( passport.session() );
  */
 app.use( '/login', loginRouter );
 app.use( '/api', apiRouter );
-app.use( '/admin', adminRouter );
+app.use( '/admin', isLoggedIn, adminRouter );
 app.use( '/', indexRouter );
 
 export default app;
