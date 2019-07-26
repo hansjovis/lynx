@@ -3,6 +3,7 @@ import passport     from 'passport';
 import cookieParser from 'cookie-parser';
 import logger       from 'morgan';
 import session      from 'express-session';
+import flash        from 'express-flash';
 
 /**
  * Setup authentication
@@ -28,6 +29,7 @@ app.use( logger( 'dev' ) );
 app.use( express.json() );
 app.use( express.urlencoded( { extended: false } ) );
 app.use( cookieParser() );
+app.use( flash() );
 app.use( express.static( 'public' ) );
 
 app.use( session( {

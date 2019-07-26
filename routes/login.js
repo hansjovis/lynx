@@ -7,8 +7,8 @@ const scripts = [];
 
 /* GET login page. */
 router.get( '/', function( req, res ) {
-  // Render the HTML-page using the rendered application and the stringified linked data.
-  res.render( 'login', { scripts } );
+  const errors = req.flash( 'error' );
+  res.render( 'login', { scripts, errors } );
 } );
 
 export default router;
