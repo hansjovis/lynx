@@ -9,7 +9,7 @@ const Schema = mongoose.Schema;
  * Database schema for the User model.
  */
 const schema = new Schema( {
-  userName: {
+  username: {
     type: String,
     required: true,
     unique: true
@@ -20,23 +20,24 @@ const schema = new Schema( {
   }
 } );
 
-schema.pre( 'save', async next  => {
+schema.pre( 'save', function( next ) {
   // Hash the password with a salt round of 10.
-  const hashedPassword = await bcrypt.hash( this.password, 10 );
-  // Replace the unhashed password with the hashed one.
-  this.password = hashedPassword;
-  // Move on the the next middleware.
-  next();
+  bcrypt.hash( this.password, 10 ).then(
+    hashedPassword => {
+      // Replace the unhashed password with the hashed one.
+      this.password = hashedPassword;
+      // Move on the the next middleware.
+      next();
+    }
+  )
 } );
 
 /**
  * Checks if the given password matches the hashed one stored in the database.
  */
-schema.methods.isValidPassword = async password => {
-  const user = this;
+schema.methods.isValidPassword = function( password ) {
   // Hash the given password and compare it with the one stored in the DB.
-  const isTheSame = await bcrypt.compare( password, user.password );
-  return isTheSame;
+  return bcrypt.compare( password, this.password );
 }
 
 // Create a model from the schema definition.
