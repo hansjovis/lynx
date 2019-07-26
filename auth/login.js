@@ -2,35 +2,36 @@ import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 import User from '../models/User';
 
-// Create a passport middleware to handle User login
-passport.use( 'login', new LocalStrategy( {
+const options = {
   usernameField : 'username',
   passwordField : 'password'
-}, ( username, password, next ) => {
+}
 
-  let loggedInUser = {};
-
-  // Find the user associated with the username provided by the user
+/**
+ * Checks if the supplied credentials are correct.
+ * 
+ * @param {String} username The username to check.
+ * @param {String} password The password to check.
+ * @param {Function} next The callback function to go to the next middleware. 
+ */
+function validCredentials( username, password, next ) {
   User.findOne( { username } ).then(
     function( user ) {
       if( !user ) {
-        console.error( 'User could not be found' );
         // If the user isn't found in the database, return a message
         return next( null, false, { message : 'User not found' } );
+      } else {
+        // Validate password.
+        user.isValidPassword( password )
+          .then(
+            valid => valid 
+              ? next( null, user, { message: 'Logged in successfully' } )
+              : next( null, false, { message : 'Wrong Password' } )
+          )
       }
-
-      loggedInUser = user;
-
-      // Validate password and make sure it matches with the corresponding hash stored in the database
-      // If the passwords match, it returns a value of true.
-      return user.isValidPassword( password );
     }
-  ).then(
-    function( passwordIsValid ) {
-      if ( !passwordIsValid ) {
-        return next( null, false, { message : 'Wrong Password' } );
-      }
-      return next( null, loggedInUser, { message: 'Logged in successfully' } );
-    }
-  ).catch( next )
-} ) );
+  )
+}
+
+// Create a passport middleware to handle User login
+passport.use( 'login', new LocalStrategy( options, validCredentials ) );

@@ -3,12 +3,15 @@ import passport from 'passport';
 
 const router = express.Router();
 
+const loginOptions = {
+  successRedirect: '/admin',
+  failureRedirect: '/login',
+  failureFlash: true,
+}
+
 /* POST login */
 router.post( '/login', 
-  passport.authenticate( 'login' ), 
-  ( req, res ) => {
-    res.redirect( '/admin' );
-  }
+  passport.authenticate( 'login', loginOptions )
 );
 
 /* POST signup */
