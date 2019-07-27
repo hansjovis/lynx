@@ -9,14 +9,17 @@ import { renderRoutes } from 'react-router-config';
  * (Mock) data
  */
 import data from "../data/jane_doe.json";
-import createReduxStore from '../client_src/javascripts/createReduxStore';
+import createReduxStore from '../client_src/frontend/script/createReduxStore';
 
 import routes from './routes';
 
 const router = express.Router();
 
+// The scripts to load for this route.
+const scripts = [ "js/client-bundle.js" ];
+
 /* GET home page. */
-router.get( '/', function( req, res ) {
+router.get( '/*', function( req, res ) {
   // Create the redux store, which houses the application state.
   const store = createReduxStore( data );
 
@@ -36,7 +39,7 @@ router.get( '/', function( req, res ) {
   const dataString = JSON.stringify( data, null, 2 );
 
   // Render the HTML-page using the rendered application and the stringified linked data.
-  res.render( 'index', { content, data: dataString } );
+  res.render( 'index', { content, data: dataString, scripts } );
 } );
 
 export default router;

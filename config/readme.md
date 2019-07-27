@@ -10,6 +10,7 @@ These include database configuration (connection information like address and cr
 ## Current configuration files
 
 ### `database.json`
+Configuration for the MongoDB database.
 
 #### Structure:
  * **URL**: The URL to the MongoDB database.
@@ -18,5 +19,18 @@ These include database configuration (connection information like address and cr
 ```json
 {
   "URL": "mongodb:////localhost:27017/lynx"
+}
+```
+
+### `session.json`
+Configuration for the session storage. Used to store session information like currently logged in users.
+
+#### Structure:
+ * **SECRET**: The secret to use when storing session information.
+
+#### Example
+```json
+{
+  "SECRET": "e17896c1bc3695389154b7c3b7a6e7bfa4623ddc"
 }
 ```

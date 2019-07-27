@@ -1,5 +1,5 @@
 
-import App from '../client_src/javascripts/components/App';
+import App from '../client_src/frontend/script/components/App';
 
 const routes = [
   {
