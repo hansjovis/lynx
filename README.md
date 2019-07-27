@@ -42,6 +42,8 @@ You should configure Lynx to use your MongoDB instance by adding the appropriate
  - `yarn lint` lints the source files using ESLint.
 
 ## Changelog
+### 2019-07-27
+ - ✅ Added basic login capabilities.
 ### 2019-07-18
  - ✅ Added React Router.
  - ✅ Added ESLint + configuration.
@@ -51,5 +53,5 @@ You should configure Lynx to use your MongoDB instance by adding the appropriate
  - ✅ Added Redux to the stack.
  
 ## Plans for the future
- - Add a login capability to start working on the admin side.
+ - Setup build pipeline for styling.
 
