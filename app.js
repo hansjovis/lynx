@@ -5,10 +5,13 @@ import logger       from 'morgan';
 import session      from 'express-session';
 import flash        from 'express-flash';
 
+import SESSION_CONFIG from './config/session.json';
+
 /**
  * Setup authentication
  */
 import './auth/setup';
+import isLoggedIn from './auth/isLoggedIn';
 
 /*
  * Import routers.
@@ -17,8 +20,6 @@ import indexRouter from './routes/index';
 import adminRouter from './routes/admin';
 import loginRouter from './routes/login';
 import apiRouter   from './routes/api';
-
-import isLoggedIn from './auth/isLoggedIn';
 
 const app = express();
 
@@ -33,7 +34,7 @@ app.use( flash() );
 app.use( express.static( 'public' ) );
 
 app.use( session( {
-  secret: 'SECRET_STRING',
+  secret: SESSION_CONFIG.SECRET,
   resave: true,
   saveUninitialized: true } ) );
 app.use( passport.initialize() );
