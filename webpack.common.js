@@ -3,9 +3,10 @@
  * Common Webpack configuration for the server- as well as the client side. 
  */
 module.exports = {
+  mode: 'development',
   stats: {
     colors: true,
-    reasons: true,
+    reasons: false,
     chunks: false
   },
   module: {
