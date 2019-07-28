@@ -10,6 +10,11 @@
     {{#each scripts}}
     <script src="{{this}}" type="application/javascript"></script>
     {{/each}}
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    {{#each styles}}
+    <link rel="stylesheet" href="{{this}}" type="text/css"/>
+    {{/each}}
 </head>
 <body>
     <main id="app">{{{body}}}</main>

@@ -22,7 +22,7 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks( 'grunt-webpack' );
   grunt.loadNpmTasks( 'grunt-contrib-copy' );
 
-  grunt.registerTask( 'default', [ 'webpack' ] );
+  grunt.registerTask( 'default', [ 'copy', 'webpack' ] );
 
   // Build steps.
   grunt.registerTask( 'build:server', [ 'webpack:server' ] );
