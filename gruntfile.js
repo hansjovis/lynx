@@ -26,5 +26,5 @@ module.exports = function( grunt ) {
 
   // Build steps.
   grunt.registerTask( 'build:server', [ 'webpack:server' ] );
-  grunt.registerTask( 'build:client', [ 'webpack:client' ] );
+  grunt.registerTask( 'build:client', [ 'copy', 'webpack:client' ] );
 };

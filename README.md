@@ -30,10 +30,15 @@ You can [download the community edition here](https://www.mongodb.com/download-c
 
 You should configure Lynx to use your MongoDB instance by adding the appropriate configuration ([see the `config` folder](https://github.com/hansjovis/lynx/tree/develop/config)).
 
+#### Adding a session secret
+The session middleware used uses [a secret to protect sessions from being hijacked](https://martinfowler.com/articles/session-secret.html). 
+
+You should configure Lynx to use a randomly generated string as a session secret by adding the appropriate configuration ([see the `config` folder](https://github.com/hansjovis/lynx/tree/develop/config)).
+
 ### Building source files
- - `yarn build` builds the source files (alias for `yarn build:server && yarn build:client`).
- - `yarn build:server` builds the server files only.
- - `yarn build:client` builds the client files only.
+ - `grunt` builds the source files.
+ - `grunt build:server` builds the server files only.
+ - `grunt build:client` builds the client files only (also copies the stylesheets from source to dist).
 
 ### Running the application
  - `yarn start` runs the application.
@@ -42,6 +47,10 @@ You should configure Lynx to use your MongoDB instance by adding the appropriate
  - `yarn lint` lints the source files using ESLint.
 
 ## Changelog
+### 2019-07-28
+ - ✅ Added Grunt build pipeline.
+   - Integrated Webpack.
+   - Added 'copy' task for styles.
 ### 2019-07-27
  - ✅ Added basic login capabilities.
 ### 2019-07-18
@@ -53,5 +62,7 @@ You should configure Lynx to use your MongoDB instance by adding the appropriate
  - ✅ Added Redux to the stack.
  
 ## Plans for the future
- - Setup build pipeline for styling.
+ - Add styling to the login page.
+ - Create a build pipeline for the admin script files.
+ - Start fleshing out the admin by adding a sidebar navigation menu.
 
