@@ -8,7 +8,7 @@ const baseConfig = require( './webpack.common.js' );
 
 const config = {
   context: __dirname,
-  entry: [ './client_src/frontend/script/index.js' ],
+  entry: [ './client_src/script/frontend/index.js' ],
   output: {
     path: path.join( __dirname, 'public', 'js' ),
     filename: 'client-bundle.js',
