@@ -47,6 +47,8 @@ You should configure Lynx to use a randomly generated string as a session secret
  - `yarn lint` lints the source files using ESLint.
 
 ## Changelog
+### 2019-08-05
+ - ✅ Added styling to the login page.
 ### 2019-07-28
  - ✅ Added Grunt build pipeline.
    - Integrated Webpack.
@@ -62,7 +64,6 @@ You should configure Lynx to use a randomly generated string as a session secret
  - ✅ Added Redux to the stack.
  
 ## Plans for the future
- - Add styling to the login page.
  - Create a build pipeline for the admin script files.
  - Start fleshing out the admin by adding a sidebar navigation menu.
 
