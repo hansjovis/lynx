@@ -1,19 +1,22 @@
-<form action="/api/login" method="POST">
-  <h1>Lynx - Login</h1>
+<form id="login" action="/api/login" method="POST" class="paper">
+  <header class="paper-header">
+    <h1>Sign in</h1>
+  </header>
+  <div class="paper-content">
+    {{#each errors }}
+      <p class="inline-message error">{{this}}</p>
+    {{/each}}
 
-  {{#each errors }}
-    <p class="inline-message error">{{this}}</p>
-  {{/each}}
+    <div class="labeled-input">
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text"/>
+    </div>
 
-  <div class="labeled-input">
-    <label for="username">Username</label>
-    <input id="username" name="username" type="text"/>
+    <div class="labeled-input">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password"/>
+    </div>
+
+    <button type="submit" class="primary maxwidth">Sign in</button>
   </div>
-
-  <div class="labeled-input">
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password"/>
-  </div>
-
-  <button type="submit">Login</button>
 </form>

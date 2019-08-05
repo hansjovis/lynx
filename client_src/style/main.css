@@ -1,4 +1,112 @@
 
+/* Use the new fancy-schmancy box model. */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+.paper {
+  background: white;
+  
+  margin: 16px;
+  padding: 0px;
+
+  box-shadow: 0px 0px 8px 1px gray;
+
+  border: 1px solid gray;
+  border-radius: 2px 16px 2px 16px;
+}
+
+.paper .paper-header {
+  background: hsl(0, 0%, 15%);
+  color: white;
+  padding: 8px;
+  border-radius: 1px 14px 0 0;
+}
+
+.paper-header * {
+  font-size: 18px;
+}
+
+.paper .paper-content {
+  margin: 16px;
+}
+
+input[type=text], input[type=password] {
+  border: 1px solid gray;
+  border-radius: 2px;
+  box-shadow: inset 0px 0px 2px 1px lightgray;
+  padding: 6px;
+}
+
+.labeled-input {
+  margin: 4px 0;
+  width: 100%;
+}
+
+.labeled-input label {
+  display: block;
+}
+
+.labeled-input input[type=text], input[type=password] {
+  width: 100%;
+}
+
+.align-right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+button {
+  margin-top: 8px;
+}
+
+.maxwidth {
+  width: 100%;
+}
+
+button.primary {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 0px;
+  border-radius: 2px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.primary {
+  background: hsl(100, 100%, 25%)
+}
+
+.primary:hover {
+  background: hsl(100, 100%, 30%)
+}
+
+.primary:active {
+  background: hsl(100, 100%, 15%)
+}
+
+.inline-message.error {
+  background: lightcoral;
+  padding: 8px;
+
+  border-radius: 2px;
+}
+
+.inline-message.error::before {
+  content: 'Error: ';
 }
