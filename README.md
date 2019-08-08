@@ -64,6 +64,7 @@ You should configure Lynx to use a randomly generated string as a session secret
  - ✅ Added Redux to the stack.
  
 ## Plans for the future
+ - Add SASS to adequately handle CSS files.
  - Create a build pipeline for the admin script files.
  - Start fleshing out the admin by adding a sidebar navigation menu.
 
