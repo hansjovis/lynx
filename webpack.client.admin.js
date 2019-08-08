@@ -1,5 +1,5 @@
 /**
- * Webpack configuration specifics for the clientside.
+ * Webpack configuration specifics for the admin part of the clientside.
  */
 
 const path = require( 'path' );
@@ -8,10 +8,10 @@ const baseConfig = require( './webpack.common.js' );
 
 const config = {
   context: __dirname,
-  entry: [ './client_src/script/frontend/index.js' ],
+  entry: [ './client_src/script/admin/index.js' ],
   output: {
     path: path.join( __dirname, 'public', 'js' ),
-    filename: 'client-bundle.js',
+    filename: 'admin-bundle.js',
     pathinfo: false,
   },
   resolve: {

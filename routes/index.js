@@ -16,7 +16,7 @@ import routes from './routes';
 const router = express.Router();
 
 // The scripts to load for this route.
-const scripts = [ "js/client-bundle.js" ];
+const scripts = [ "js/frontend-bundle.js" ];
 
 // Stylesheets to load.
 const styles = [ ];
