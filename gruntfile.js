@@ -1,13 +1,15 @@
-const webpackClientConfig = require( './webpack.client.js' );
-const webpackServerConfig = require( './webpack.server.js' );
+const webpackFrontendConfig = require( './webpack.client.frontend' );
+const webpackAdminConfig    = require( './webpack.client.admin' );
+const webpackServerConfig         = require( './webpack.server' );
 
 module.exports = function( grunt ) {
 
   // Project configuration.
   grunt.initConfig( {
     webpack: {
-      client: webpackClientConfig,
-      server: webpackServerConfig
+      admin:    webpackAdminConfig,
+      frontend: webpackFrontendConfig,
+      server:   webpackServerConfig
     },
     copy: {
       style: {
@@ -26,5 +28,5 @@ module.exports = function( grunt ) {
 
   // Build steps.
   grunt.registerTask( 'build:server', [ 'webpack:server' ] );
-  grunt.registerTask( 'build:client', [ 'copy', 'webpack:client' ] );
+  grunt.registerTask( 'build:client', [ 'copy', 'webpack:frontend', 'webpack:admin' ] );
 };

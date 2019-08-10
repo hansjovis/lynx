@@ -5,7 +5,7 @@ import { renderToString } from 'react-dom/server';
 const router = express.Router();
 
 // The scripts to load for this route.
-const scripts = [];
+const scripts = [ "js/admin-bundle.js" ];
 
 /* GET admin pages. */
 router.get( '/*', function( req, res ) {
