@@ -16,10 +16,10 @@ import isLoggedIn from './auth/isLoggedIn';
 /*
  * Import routers.
  */
-import indexRouter from './routes/index';
-import adminRouter from './routes/admin';
-import loginRouter from './routes/login';
-import apiRouter   from './routes/api';
+import indexRouter from './routes/frontend/server-route';
+import adminRouter from './routes/admin/server-route';
+import loginRouter from './routes/login/server-route';
+import apiRouter   from './routes/api/server-route';
 
 const app = express();
 

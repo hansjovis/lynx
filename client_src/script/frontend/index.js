@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 
-import routes from '../../../routes/routes';
+import routes from '../../../routes/frontend/client-routes';
 
 import createReduxStore from './createReduxStore';
 

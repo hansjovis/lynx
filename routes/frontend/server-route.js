@@ -8,10 +8,10 @@ import { renderRoutes } from 'react-router-config';
 /*
  * (Mock) data
  */
-import data from "../data/jane_doe.json";
-import createReduxStore from '../client_src/script/frontend/createReduxStore';
+import data from "../../data/jane_doe.json";
+import createReduxStore from '../../client_src/script/frontend/createReduxStore';
 
-import routes from './routes';
+import routes from './client-routes';
 
 const router = express.Router();
 
