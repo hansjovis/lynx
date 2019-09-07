@@ -12,11 +12,17 @@ module.exports = function( grunt ) {
       server:   webpackServerConfig
     },
     copy: {
-      style: {
+      style_src: {
         expand: true,
         cwd: 'client_src/style',
         src: [ '**/*.css' ], 
         dest: 'public/css/'
+      },
+      style_vendor: {
+        expand: true,
+        cwd: 'client_vendor/css',
+        src: [ '**/*{.css,.ttf,.woff,.woff2,.eot,.svg}' ], 
+        dest: 'public/css/vendor'
       }
     }
   } );

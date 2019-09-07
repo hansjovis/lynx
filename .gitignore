@@ -1,5 +1,6 @@
 # Ignore downloaded external libraries
 /node_modules/
+/client_vendor/
 
 # Ignore build versions of the server- and client code
 /server/
