@@ -20,7 +20,7 @@
     "esm": "^3.2.25",
     "express": "~4.16.1",
     "express-flash": "^0.0.2",
-    "express-handlebars": "^3.1.0",
+    "express-handlebars": "^5.3.1",
     "express-session": "^1.16.2",
     "grunt-contrib-copy": "^1.0.0",
     "http-errors": "~1.6.3",
